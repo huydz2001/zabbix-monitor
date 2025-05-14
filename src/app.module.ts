@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CollectorModule } from './collector/collector.module';
 import { ZabbixModule } from './zabbix/zabbix.module';
+import { JunosModule } from './junos/junos.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { ZabbixModule } from './zabbix/zabbix.module';
     ),
     CollectorModule,
     ZabbixModule,
+    JunosModule,
   ],
   controllers: [],
   providers: [],
