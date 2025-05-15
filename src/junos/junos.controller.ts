@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { JunosService } from './junos.service';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Junos')
 @Controller('junos')
@@ -52,6 +52,7 @@ export class JunosController {
     return await this.junosService.getLdpInterfaceInformation();
   }
 
+  @ApiOperation({ summary: 'Tùy version Junos mới mới có' })
   @Get('/mpls-interface-information')
   async getMplsInterfaceInformation() {
     return await this.junosService.getMplsInterfaceInformation();
