@@ -69,6 +69,7 @@ export class JunosService {
     );
   }
 
+  // Tuy junos version mới mới có
   async getMplsInterfaceInformation() {
     return this.junosApiService.callJunosRpc(
       '/rpc/get-mpls-interface-information',
