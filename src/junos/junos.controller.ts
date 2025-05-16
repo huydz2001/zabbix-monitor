@@ -7,7 +7,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 export class JunosController {
   constructor(private readonly junosService: JunosService) {}
 
-  @Get('/chassis-inventory')
+  @Get('/get-chassis-inventory')
   async chassisInventory() {
     return await this.junosService.chassisInventory();
   }
