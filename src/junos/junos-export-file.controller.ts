@@ -8,7 +8,7 @@ import { Response } from 'express';
 export class JunosExportFileController {
   constructor(private readonly junosService: JunosService) {}
 
-  @Get('/export/chassis-inventory')
+  @Get('/export/get-chassis-inventory')
   async exportChassisInventory(@Res() res: Response) {
     const data = await this.junosService.chassisInventory();
     res.header('Content-Type', 'application/json');
